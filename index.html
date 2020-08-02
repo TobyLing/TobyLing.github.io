@@ -171,7 +171,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-08-02 14:38:10 / Modified: 17:22:33" itemprop="dateCreated datePublished" datetime="2020-08-02T14:38:10+01:00">2020-08-02</time>
+              <time title="Created: 2020-08-02 14:38:10 / Modified: 17:24:07" itemprop="dateCreated datePublished" datetime="2020-08-02T14:38:10+01:00">2020-08-02</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -195,42 +195,14 @@
 
       
           <h1 id="Selenium-WebDriver"><a href="#Selenium-WebDriver" class="headerlink" title="Selenium WebDriver"></a>Selenium WebDriver</h1><h2 id="介绍-WebDriver"><a href="#介绍-WebDriver" class="headerlink" title="介绍 WebDriver"></a>介绍 WebDriver</h2><p>Selenium 2.0 最主要的一个新特性就是集成了 WebDriver API。WebDriver 提供更精简的编程几口，以解决 Selenium-RC API 中的一些限制。WebDriver 为那些页面元素可以不通过页面重新加载来更新的动态网页提供了更好的支持。WebDriver 的目标是提供一套精心设计的面向对象的 API 来更好的支持现代高级 web 应用的测试工作。</p>
-<h2 id="同-Selenium-RC-相比，WebDriver-如何驱动浏览器的？"><a href="#同-Selenium-RC-相比，WebDriver-如何驱动浏览器的？" class="headerlink" title="同 Selenium-RC 相比，WebDriver 如何驱动浏览器的？"></a>同 Selenium-RC 相比，WebDriver 如何驱动浏览器的？</h2><p>Selenium-WebDriver 直接通过浏览器自动化的本地接口来调用浏览器。如何直接调用，和调用的细节取决于你使用什么浏览器。本章后续的内容介绍了每个 “browser driver” 的详细信息。</p>
-<p>相比 Selenium-RC ，WebDriver 确实非常不一样。Selenium-RC 在所有支持的浏览器中工作原理是一样的。它将 JavaScript 在浏览器加载的时候注入浏览器，然后使用这些 JavaScript 驱动 AUT 运行 WebDriver 使用的是不同的技术，再一次强调，它是直接调用浏览器自动化的本地接口。</p>
-<h2 id="WebDriver-和-Selenium-Server"><a href="#WebDriver-和-Selenium-Server" class="headerlink" title="WebDriver 和 Selenium-Server"></a>WebDriver 和 Selenium-Server</h2><p>你可能需要，也可能不需要 Selenium Server，取决于你打算如何使用 Selenium-WebDriver。如果你仅仅需要使用 WebDriver API，那就不需要 Selenium-Server。如果你所有的测试和浏览器都在一台机器上，那么你仅需要 WebDriver API。WebDriver 将直接操作浏览器。</p>
-<p>在有些情况下，你需要使用 Selenium-Server 来配合 Selenium-WebDriver 工作，例如：</p>
-<ul>
-<li>你使用 Selenium-Grid 来分发你的测试给多个机器或者虚拟机。</li>
-<li>你希望连接一台远程的机器来测试一个特定的浏览器。</li>
-<li>你没有使用 Java 绑定（例如 Python, C#, 或 Ruby），并且可能希望使用 HtmlUnit Driver。</li>
-</ul>
-<h2 id="简单的-Selenium-WebDriver-python-实例说明"><a href="#简单的-Selenium-WebDriver-python-实例说明" class="headerlink" title="简单的 Selenium-WebDriver + python 实例说明"></a>简单的 Selenium-WebDriver + python 实例说明</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time </span><br><span class="line">    </span><br><span class="line"><span class="comment">#创建一个chrome浏览器的webdriver实例</span></span><br><span class="line">driver = webdriver.Chorme()</span><br><span class="line"></span><br><span class="line"><span class="comment">#打开url</span></span><br><span class="line">driver.get(<span class="string">&quot;http://baidu.com&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印输入的url的主题</span></span><br><span class="line">print(driver.title)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#找到为“kw”元素，这是百度首页的搜索框</span></span><br><span class="line">driver.find_element_by_id(<span class="string">&quot;kw&quot;</span>).send_keys(<span class="string">&quot;selenium&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#找到为“su”元素，这是百度首页的按钮，做点击操作</span></span><br><span class="line">driver.find_element_by_id(<span class="string">&quot;su&quot;</span>).click()</span><br><span class="line"></span><br><span class="line"><span class="comment">#推迟调用下一线程的运行，参数单位为secs</span></span><br><span class="line">time.sleep(<span class="number">3</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#退出浏览器</span></span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
-<p>这是一个对百度首页的搜索框进行的自动化单元测试，整体流程非常简单，代码理解请参看注解。</p>
-<h2 id="Selenium-WebDriver-API-和操作"><a href="#Selenium-WebDriver-API-和操作" class="headerlink" title="Selenium WebDriver API 和操作"></a>Selenium WebDriver API 和操作</h2><h3 id="基本操作。"><a href="#基本操作。" class="headerlink" title="基本操作。"></a>基本操作。</h3><ol>
-<li>返回上一个页面: <code>driver.back()</code></li>
-<li>切换到下一个页面: <code>driver.forward()</code></li>
-<li>浏览器窗口最大化：<code>driver.maxmize_window()</code></li>
-<li>设置窗口大小为800 * 720: <code>driver.set_window_size(800, 720)</code></li>
-<li>截图并设置保存路径：<code>driver.get_screenshot_as_file(&quot;&quot;)</code></li>
-<li>页面刷新：<code>driver.refresh()</code></li>
-<li>关闭当前页面：<code>driver.close()</code></li>
-<li>关闭所有由当前测试脚本打开的页面：<code>driver.quit()</code></li>
-<li>打开url：<code>driver.get(输入url)</code></li>
-</ol>
-<h3 id="元素定位方式。"><a href="#元素定位方式。" class="headerlink" title="元素定位方式。"></a>元素定位方式。</h3><ol>
-<li>根据id查找: <code>driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;) </code></li>
-<li>根据name查找:<br><code>driver.find_element_by_name(&quot;wd&quot;)</code></li>
-<li>根据类名classname来查找:<br><code>driver.find_element_by_class_name(&quot;s_ipt&quot;)</code></li>
-<li>根据标签名查找:<br><code>driver.find_element_by_tag_name(&quot;input&quot;)</code></li>
-<li>根据链接文本查找:<br><code>driver.find_element_by_link_text(&quot;新闻&quot;)</code></li>
-<li>根据残差文本查找:<code>driver.find_element_by_partial_link_text(&quot;新&quot;)</code></li>
-<li>根据css的id属性查找:<br><code>driver.find_element_by_css_selector(&quot;#kw&quot;)</code></li>
-<li>根据css的class属性查找:<br><code>driver.find_element_by_css_selector(&quot;.s_ipt&quot;)</code></li>
-<li>根据css的标签名查找：<br><code>driver.find_element_by_css_selector(&quot;input&quot;)</code></li>
-<li>使用css的其他属性查找：<br><code>driver.find_element_by_css_selector(&quot;[maxlength=&#39;255&#39;]&quot;) #使用maxlength属性</code><br><code>driver.find_element_by_css_selector(&quot;[autocomplete=&#39;off&#39;]&quot;) #使用autocomplete属性</code></li>
-<li>使用混合查找方式:<br><code>driver.find_element_by_css_selector(&quot;input#lw&quot;) # 使用元素的id定位</code><br><code>driver.find_element_by_css_selector(&quot;input.s_ipt&quot;) # 使用元素的class定位</code><br><code>driver.find_element_by_css_selector(&quot;input[autocomplete=&#39;off&#39;]&quot;) #使用元素的autocomplete属性定位</code></li>
-</ol>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/02/selenium-python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E4%BA%8C/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
