@@ -171,7 +171,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-08-02 06:48:15 / Modified: 09:38:06" itemprop="dateCreated datePublished" datetime="2020-08-02T06:48:15+01:00">2020-08-02</time>
+              <time title="Created: 2020-08-02 06:48:15 / Modified: 09:40:50" itemprop="dateCreated datePublished" datetime="2020-08-02T06:48:15+01:00">2020-08-02</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -195,120 +195,14 @@
 
       
           <h1 id="1-自动化测试的概念"><a href="#1-自动化测试的概念" class="headerlink" title="1. 自动化测试的概念"></a>1. 自动化测试的概念</h1><p>在软件测试中， 自动化测试指的是使用独立于待测软件的其他软件来自动执行测试、比较实际结果与预期并生成测试报告这一过程。<a href="#refer-1"><sup>[1]</sup></a>  在测试流程已经确定后，测试自动化可以自动执行的一些重复但必要测试工作。也可以完成手动测试几乎不可能完成的测试。<a href="#refer-2"><sup>[2]</sup></a>对于持续交付和持续集成的开发方式而言，测试自动化是至关重要的。</p>
-<hr>
-<p>随着软件系统规模的日益扩大，以及应用领域的不断拓展，对软件系统的测试也变得更加困难和复杂，传统的人工测试的局限性也越来越明显。自动化软件测试技术可以克服传统测试技术的许多问题。自动化测试所依据的是一套严密的测试法则和评估标准，具有完整的自动测试过程。因此，它可以避免测试人员惯性思维所导致的测试疏漏，也可减少由于手工测试中繁复的重复工作所导致的人为差错。<a href="#refer-3"><sup>[3]</sup></a></p>
-<h1 id="2-概述"><a href="#2-概述" class="headerlink" title="2. 概述"></a>2. 概述</h1><h2 id="2-1-自动化测试的意义和优点"><a href="#2-1-自动化测试的意义和优点" class="headerlink" title="2.1 自动化测试的意义和优点"></a>2.1 自动化测试的意义和优点</h2><p>自动化测试（尤其是单元测试的自动化），是 极限编程 和 敏捷软件开发的一个关键特征，这也被称为测试驱动开发 (TDD)。 单元测试的用例可以在代码编写完成之前就设计好，并作为功能的一种定义形式存在。随着新的代码不断完成编写，单元测试随之进行，缺陷被不断找出，因而代码也不断得到改进。<a href="#refer-4"><sup>[4]</sup></a>由于开发人员能够及时发现缺陷然后立即作出改变，修复的代价大大减小，这种不断发展的开发方式被认为比瀑布模型这类开发结束再测试的方式更为可靠。</p>
-<p>使用 单元测试 框架（如JUnit、NUnit等“xUnit”类型测试框架）执行自动化测试是目前软件开发行业的大趋势。单元测试框架的应用使得各部分代码开发完成后立即进行相关单元测试来验证它们是否如预期在运行成为可能。</p>
-<p>手工完成一些软件测试的工作(例如大量的低级接口的回归测试)十分艰苦耗时， 而且寻找某些种类的缺陷时效率并不高，因而测试自动化，提供一种完成这类工作的有效方法。</p>
-<p>一旦自动化测试方法开发完成，日后的测试工作将可以高效循环完成。 很多时候这是针对软件产品进行长期回归测试的高效方法。 毕竟，早期一个微小的补丁中引入的回归问题可能在日后导致巨大的损失。</p>
-<h2 id="2-2-自动化测试的局限性"><a href="#2-2-自动化测试的局限性" class="headerlink" title="2.2 自动化测试的局限性"></a>2.2 自动化测试的局限性</h2><p>尽管长期来看（尤其是针对回归问题的）自动化测试，可以带来开支上的节省，将所有测试短期内全部自动化还是可能产生巨大的开销<a href="#refer-2"><sup>[2]</sup></a>，通常情况下业内采用手工测试和自动化测试相结合的方法完成测试工作。</p>
-<p>尽管测试“自动化”了，但测试结果分析、测试脚本维护和编写仍然需要人力投入。</p>
-<h2 id="2-3-自动化测试的要求"><a href="#2-3-自动化测试的要求" class="headerlink" title="2.3 自动化测试的要求"></a>2.3 自动化测试的要求</h2><p>###对于测试用例的要求<br>需要被自动化的测试用例大多是待测产品中每次修改代码都需要进行回归测试的重要部分。对这样的部分采取自动化测试手段后能大大减小手工测试消耗的人力物力。<a href="#refer-5"><sup>[5]</sup></a></p>
-<p>###对于测试人员的要求<br>由于在自动化测试中的测试用例和输出结果都由代码构成，测试工程师（或软件质量保证人员）必须具备软件编码的能力。不过某些测试自动化工具支持通过关键词指定测试步骤，因而免除了程序编写的过程，对测试人员而言也就不再要求他们掌握编程技术了。</p>
-<p>###对于团队的要求<br>自动化测什么，什么时候可以自动化，团队是否真的需要自动化——这三个问题是一个测试（或开发）团队必须做出的关键决断。<a href="#refer-6"><sup>[6]</sup></a>来自52名从业者和26名学者的研究与评论中共同指出测试自动化应考虑五个关键因素：被测系统、测试的数量和种类、测试的工具、人和组织的工作重心、交叉因素。</p>
-<p>在上述研究中最常提及的独立因素是：回归测试的必要性、经济因素、被测系统成熟度。<a href="#refer-7"><sup>[7]</sup></a></p>
-<h1 id="3-自动化测试分类"><a href="#3-自动化测试分类" class="headerlink" title="3. 自动化测试分类"></a>3. 自动化测试分类</h1><p>测试自动化有许多途径，下面列出一些广泛应用的一般方法：</p>
-<ul>
-<li>基于图形用户交互界面测试（GUI Based Testing）：基于用户界面（GUI）的测试使用能够产生图形用户界面操作（如出表点击、键盘输入等）的测试框架，模拟用户动作来以观察、验证程序是否正确的响应。<a href="#refer-8"><sup>[8]</sup></a></li>
-<li>接口测试（又称基于API的测试，API Based Testing）：接口测试指的是通过调用接口（API）绕过GUI，，以应用到验证的行为进行测试。 通常API动绕过测试的应用程序的用户界面。 它也可以测试 公共(通常)的接口 ，以类、模块或图书馆都经过测试，有各种各样的输入参数来验证返回的结果是正确的。</li>
-</ul>
-<h2 id="3-1-图形用户界面-GUI-测试"><a href="#3-1-图形用户界面-GUI-测试" class="headerlink" title="3.1 图形用户界面(GUI)测试"></a>3.1 图形用户界面(GUI)测试</h2><p>许多测试自动化工具提供记录与回放宏的功能，这允许用户记录他们在交互式用户界面上进行的鼠标点击、键盘输入等操作。这样在之后的测试当中，播放宏便可以自动测试这些交互，与正常情况下的交互反馈进行对比便可完成针对GUI的测试工作。这种方法几乎不要求用户具有软件开发经验，并且可以应用于几乎任何具有GUI的应用程序。然而，这些特点也带来了一些可靠性和维护性问题：任何按钮的重命名或是移动都会让宏出现错误，用户便需要重新录制宏。</p>
-<p>这类工具有一种用于测试网站的变种，其“界面”不是应用程序而是网页，由于网页依赖HTML渲染器展示用户界面，因此这类变种不再关注操作本身，而是代为渲染HTML并监听DOM事件来完成宏的记录与回放。 在这里，”接口”的网页。 然而，这一框架利用了完全不同的技术，因为它是渲染 HTML 并听 事件 ，而不是操作系统的活动。 无头浏览器（一种没有用户界面的浏览器，专用于网页功能性测试）或Selenium Web Driver通常用于网站的测试工作。<a href="#refer-12"><sup>[12]</sup></a><a href="#refer-13"><sup>[13]</sup></a><a href="#refer-14"><sup>[14]</sup></a></p>
-<h2 id="3-2-接口测试"><a href="#3-2-接口测试" class="headerlink" title="3.2 接口测试"></a>3.2 接口测试</h2><p>接口测试是被广泛使用的软件测试方法之一，它使软件测试工程师能够忽略GUI的影响，对软件功能本身进行测试。它是程序逻辑测试中非常关键的一步<a href="#refer-9"><sup>[9]</sup></a>。通常情况下在开发的早期阶段，接口测试就会开始执行来确保代码始终是准确无误的。</p>
-<p>接口测试也作为集成测试的一部分，用于判断系统是否满足功能、可靠性、性能表现和安全性的要求。<a href="#refer-10"><sup>[10]</sup></a> 由于接口测试不使用GUI，它主要通过字符方式与测试者进行交互。<a href="#refer-11"><sup>[11]</sup></a></p>
-<h2 id="3-3-持续测试"><a href="#3-3-持续测试" class="headerlink" title="3.3 持续测试"></a>3.3 持续测试</h2><p>持续测试 指的是在软件开发过程中自动对即将发布的软件版本，通过软件输送管道，自动的执行测试并给出即时反馈，依次降低软件缺陷带来的业务风险。<a href="#refer-15"><sup>[15]</sup></a><a href="#refer-16"><sup>[16]</sup></a></p>
-<h1 id="4-自动化测试框架"><a href="#4-自动化测试框架" class="headerlink" title="4. 自动化测试框架"></a>4. 自动化测试框架</h1><p>测试自动化框架是一个为特定产品设置一系列特定自动化规则执行测试的集成系统。 这套系统的整合（测试用的）函数库、测试数据集、对象细节（元数据）和各种可重用模块。 将这些模块按照测试需求组合起来便可以得到一个完整的，针对特定功能或应用场景的测试用例。测试框架为自动化测试提供基础，并简化了自动化测试的工作流程。</p>
-<h2 id="4-1-几种常见的框架／脚本模式"><a href="#4-1-几种常见的框架／脚本模式" class="headerlink" title="4.1 几种常见的框架／脚本模式"></a>4.1 几种常见的框架／脚本模式</h2><ol>
-<li>线性测试（尤其是测试工具自动生成的宏类脚本）</li>
-<li>结构化测试（使用控制分支结构，如：if-else、switch、for、while等）</li>
-<li>数据驱动测试</li>
-<li>关键字驱动测试</li>
-<li>基于模型的测试</li>
-<li>代码驱动的测试</li>
-<li>行为驱动开发</li>
-<li>混合模式（混合使用多种模式）</li>
-<li>敏捷开发自动化测试框架</li>
-</ol>
-<h2 id="4-2-测试框架的功能-17"><a href="#4-2-测试框架的功能-17" class="headerlink" title="4.2 测试框架的功能 [17]"></a>4.2 测试框架的功能 <a href="#refer-17"><sup>[17]</sup></a></h2><ol>
-<li>定义软件预期的表现（定义正确输出）</li>
-<li>针对待测试程序的生命周期创建运行钩子，或直接驱动待测程序</li>
-<li>执行测试</li>
-<li>报告结果</li>
-</ol>
-<h2 id="4-3-自动化测试接口"><a href="#4-3-自动化测试接口" class="headerlink" title="4.3 自动化测试接口"></a>4.3 自动化测试接口</h2><p>自动化测试接口是自动化测试框架中，为不同测试工具提供统一工作空间的平台。 其目标是尽可能减少将业务指标映射成测试步骤这一过程中产生的代码量。自动化测试接口被设计用于改善测试脚本的维护效率和灵活性。<a href="#refer-18"><sup>[18]</sup></a></p>
-<p>自动化测试接口包括以下核心模块：</p>
-<ul>
-<li>接口引擎: 接口引擎建立在接口环境之上，包括一个 语法分析器 和一个测试运行程序。语法分析器用于将来自对象库的文件解析成测试脚本语言可用的形式，之后由测试运行程序执行。<a href="#refer-18"><sup>[18]</sup></a></li>
-<li>接口环境</li>
-<li>对象库: 对象库是使用测试工具，针对待测UI或应用程序创建的全部测试数据、宏对象的集合。<a href="#refer-18"><sup>[18]</sup></a></li>
-</ul>
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="https://s1.ax1x.com/2020/08/02/aYN1fA.png">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">图1. 自动化测试接口模型</div>
-</center>
-
-<h2 id="4-4-自动化框架和测试工具的区别"><a href="#4-4-自动化框架和测试工具的区别" class="headerlink" title="4.4 自动化框架和测试工具的区别"></a>4.4 自动化框架和测试工具的区别</h2><p>测试工具是专门针对一些特殊应用场景设计的，它们在自动化测试过程中完成一部分工作。自动化框架则不执行特定任务，而作为基础设施，为不同工具提供统一平台，并让它们工作在同一个模式下，以便自动化测试工程师开展工作。<a href="#refer-19"><sup>[19]</sup></a></p>
-<p>有许多不同种类的框架，会依照测试或开发的架构来进行分类，有以下这些分类：</p>
-<ol>
-<li>资料驱动测试</li>
-<li>模组驱动测试</li>
-<li>关键字驱动测试</li>
-<li>混合测试</li>
-<li>基于模型的测试</li>
-<li>程式驱动测试</li>
-<li>行为驱动开发</li>
-</ol>
-<h1 id="5-自动化测试在行业中的现状"><a href="#5-自动化测试在行业中的现状" class="headerlink" title="5. 自动化测试在行业中的现状"></a>5. 自动化测试在行业中的现状</h1><p>根据 Practitest 组织2018年收集的来自80多个国家的QA专业人士提供的约1,500份回复报告统计显示，高达76%的受访者执行自动化测试或负责编写自动化测试脚本<a href="#refer-20"><sup>[20]</sup></a>。有85.5%的受访企业采用了各类自动化测试方法，其中75%的企业利用自动化测试方法执行回归测试，43%的企业将自动化测试和持续集成、持续开发方法结合使用，有3%的公司甚至将90%的测试工作自动化<a href="#refer-20"><sup>[20]</sup></a>进行。</p>
-<p>就薪资水平看，有着一到两年工作经历的测试工程师在西方国家能够拿到40k左右的年薪。具备自动化能力的工程师的年薪普遍更高。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><div id="refer-1"></div>
-- [1] [Kolawa, Adam; Huizinga, Dorota. Automated Defect Prevention: Best Practices in Software Management. Wiley-IEEE Computer Society Press. 2007: 74. ISBN 978-0-470-04212-0.](https://www.wiley.com/en-us/Automated+Defect+Prevention%3A+Best+Practices+in+Software+Management-p-9780470042120)
-<div id="refer-2"></div>
-- [2] 徐进. 自动化软件测试的分析. 《信息技术》: 152-155页.
-<div id="refer-3"></div>
-- [3] 金虎. 自动化软件测试技术研究. 《四川大学》.
-<div id="ref-4"></div>
-- [4] [Learning Test-Driven Development by Counting Lines; Bas Vodde & Lasse Koskela; IEEE Software Vol. 24, Issue 3, 2007.](https://ieeexplore.ieee.org/document/4163032/)
-<div id="ref-5"></div>
-- [5] [李刚毅， 金蓓弘. 自动化回归测试的技术和实现 (pdf). 计算机应用研究. 2006.](51testing.com/ddimg/uploadsoft/20090708/autohg.pdf)
-<div id="ref-6"></div>
-- [6] [Brian Marick. When Should a Test Be Automated?. StickyMinds.com. [2009-08-20].](http://www.stickyminds.com/sitewide.asp?Function=edetail&ObjectType=ART&ObjectId=2010)
-<div id="ref-7"></div>
-- [7] [Garousi, Vahid; Mäntylä, Mika V. When and what to automate in software testing? A multi-vocal literature review. Information and Software Technology. 2016-08-01, 76: 92–117.](https://www.sciencedirect.com/science/article/abs/pii/S0950584916300702)
-<div id="ref-8"></div>
-- [8] 李涛. 图形用户界面GUI的自动测试工具的研究. 四川大学硕士学位论文. 2005.
-<div id="ref-9"></div>
-- [9] [Produce Better Software by Using a Layered Testing Strategy, by Sean Kenefick, Gartner January 7, 2014.](https://www.gartner.com/account/signin?method=initialize&TARGET=http%253A%252F%252Fwww.gartner.com%252Fdocument%252F2645817%253Fref%253DQuickSearch)
-<div id="ref-10"></div>
-- [10] [Testing APIs protects applications and reputations, by Amy Reichert, SearchSoftwareQuality March 2015.](https://searchsoftwarequality.techtarget.com/tip/Testing-APIs-protects-applications-and-reputations)
-<div id="ref-11"></div>
-- [11] [All About API Testing: An Interview with Jonathan Cooper, by Cameron Philipp-Edmonds, Stickyminds August 19, 2014.](All About API Testing: An Interview with Jonathan Cooper, by Cameron Philipp-Edmonds, Stickyminds August 19, 2014)
-<div id="ref-12"></div>
-- [12] [Headless Testing with Browsers.](https://docs.travis-ci.com/user/gui-and-headless-browsers/)
-<div id="ref-13"></div>
-- [13] [Headless Testing with PhantomJS.](https://phantomjs.org/headless-testing.html)
-<div id="ref-14"></div>
-- [14] [Automated User Interface Testing.](https://www.devbridge.com/articles/automated-user-interface-testing/)
-<div id="ref-15"></div>
-- [15] [Part of the Pipeline: Why Continuous Testing Is Essential, by Adam Auerbach, TechWell Insights August 2015.](https://www.techwell.com/techwell-insights/2015/08/part-pipeline-why-continuous-testing-essential)
-<div id="ref-16"></div>
-- [16] [The Relationship between Risk and Continuous Testing: An Interview with Wayne Ariola, by Cameron Philipp-Edmonds, Stickyminds December 2015.](http://www.stickyminds.com/interview/relationship-between-risk-and-continuous-testing-interview-wayne-ariola)
-<div id="ref-17"></div>
-- [17] [Selenium Meet-Up 4/20/2010 Elisabeth Hendrickson on Robot Framework 1of2. [2010-09-26].](https://www.youtube.com/watch?v=qf2i-xQ3LoY)
-<div id="ref-18"></div>
-- [18] [Conquest: Interface for Test Automation Design (PDF). [2011-12-11].](https://web.archive.org/web/20120426044210/http://www.qualitycow.com/Docs/ConquestInterface.pdf)
-<div id="ref-19"></div>
-- [19] [小聊自动化测试工具和框架.](http://www.51testing.com/html/96/n-850196.html)
-<div id="ref-20"></div>
-- [20] [practitest.com. 2018 state of testing report (PDF): 10, 21, 22. 2018.](https://qablog.practitest.com/wp-content/uploads/2018/07/2018_state_of_testing_report_1.2.pdf)
-
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/02/selenium-python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E4%B8%80/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
